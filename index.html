@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>BANN & Associates – Precision in Law, Power in Strategy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arsenal:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/shared.css">
+<style>
+/* Page-Specific Hero Media Background */
+.hero-media {
+  background-image: url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1600&h=900&fit=crop');
+  background-color: #0B1E38;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
+}
+
+/* Expertise Area Card Backgrounds */
+.expertise-grid .ex-card:nth-child(1) .ex-bg {
+  background-image: url('./assets/images/site/Corporate%20%26%20commercial.jpeg');
+}
+.ex-card {
+  aspect-ratio: 0.8 / 1;  /* Controls height-to-width ratio. Try 1/1.2, 1/0.8, etc. */
+  min-height: 300x;    /* Sets minimum height. Increase/decrease as needed */
+}
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin: 0 auto;
+  max-width: 1100px;  /* Add this to limit grid width */
+}
+.expertise-grid .ex-card:nth-child(2) .ex-bg {
+  background-image: url('./assets/images/site/disputes.jpeg');
+}
+.expertise-grid .ex-card:nth-child(3) .ex-bg {
+  background-image: url('./assets/images/site/Family.jpeg');
+}
+
+/* Featured Intro Responsive */
+@media (max-width: 1024px) {
+  .featured-intro { padding: 80px 0; }
+  .featured-intro .inner > div { 
+    display: flex !important;
+    flex-direction: column !important;
+    grid-template-columns: 1fr !important; 
+    gap: 48px !important; 
+    align-items: stretch !important;
+  }
+}
+
+@media (max-width: 820px) {
+  .featured-intro { padding: 64px 0; }
+  .featured-intro .hero-headline { font-size: clamp(36px, 5vw, 52px); }
+}
+
+@media (max-width: 560px) {
+  .featured-intro { padding: 48px 0; }
+  .featured-intro .inner > div {
+    display: flex !important;
+    flex-direction: column !important;
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+    align-items: stretch !important;
+  }
+  .featured-intro .hero-headline { font-size: clamp(28px, 4vw, 36px); }
+  .featured-intro .hero-ctas { flex-direction: column; gap: 12px; }
+  .featured-intro .btn-primary, .featured-intro .btn-ghost { width: 100%; text-align: center; }
+}
+
+/* Expertise Grid - Centered 2x2 Layout */
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .expertise-grid { grid-template-columns: repeat(2, 1fr); gap: 3px; }
+  .ex-card { aspect-ratio: 6/8; }
+}
+
+@media (max-width: 560px) {
+  .expertise-grid { grid-template-columns: 1fr; gap: 3px; }
+  .ex-card { aspect-ratio: auto; min-height: 280px; }
+}
+
+/* Why Work With Us Prominent */
+.why-list-prominent {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.why-card {
+  background: var(--cream);
+  padding: 32px;
+  border-left: 4px solid var(--gold);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+.why-card:hover {
+  transform: translateX(8px);
+  background: var(--white);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+.why-card h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 12px;
+}
+.why-card p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* About Grid Adjustment for Why Us */
+#about .about-grid {
+  grid-template-columns: 1fr 1.6fr;
+  align-items: start;
+}
+@media (max-width: 920px) {
+  #about .about-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .why-card:hover {
+    transform: none;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════
+     NAVIGATION
+══════════════════════════════════════════════════════ -->
+<nav class="nav" id="nav" role="navigation" aria-label="Main">
+  <a href="./" class="nav-logo" aria-label="BANN & Associates home">
+    <img src="assets/images/site/logo.png"
+         alt="BANN &amp; Associates Logo"
+         onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+    <span class="nav-logo-text" style="display:none">BANN &amp; Associates</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="./" class="active">Home</a></li>
+    <li><a href="./about-us/">About Us</a></li>
+    <li><a href="./services/">Expertise</a></li>
+    <li><a href="./insights/./">Insights</a></li>
+    <li><a href="./team/">People</a></li>
+    <li><a href="./contact/">Contact Us</a></li>
+  </ul>
+  <div class="nav-search">
+    <button class="search-btn" id="searchToggle" aria-label="Open search">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    </button>
+  </div>
+  <div class="nav-burger" id="navBurger" aria-label="Toggle menu" role="button" tabindex="0">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════════════════════
+     HERO
+══════════════════════════════════════════════════════ -->
+<section class="hero" id="home" aria-label="Hero">
+  <!-- Carousel Background -->
+  <div class="hero-carousel">
+    <div class="carousel-slide" style="background-image: url('./assets/images/home1.jpeg')"></div>
+    <div class="carousel-slide" style="background-image: url('./assets/images/home2.jpeg')"></div>
+  </div>
+  
+  <div class="hero-pattern" aria-hidden="true"></div>
+  <div class="hero-overlay" aria-hidden="true"></div>
+  <div class="hero-accent" aria-hidden="true"></div>
+
+  <div class="hero-body">
+    <!-- Restructured Featured Articles: Stacked with Fade-In Transition -->
+    <div style="position: relative; margin-bottom: 60px; min-height: 480px;">
+      <div id="articleContainer" style="position: relative; width: 100%; height: 100%;">
+        
+        <!-- Sports Law Article -->
+        <a href="./insights/sports-law-2026/" class="hero-article active">
+          <div class="hero-article-content">
+            <div style="max-width: 700px; text-align: left;">
+              <h3 class="hero-article-title">Legal 500 Country Comparative Guides 2026: Ghana - Sports Law</h3>
+            </div>
+            <div class="hero-article-read-more">
+              <p style="font-size: 14px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--white); margin: 0; display: flex; align-items: center; justify-content: flex-start; gap: 8px;">Read more <span style="opacity: 0.6;">&rarr;</span></p>
+            </div>
+          </div>
+        </a>
+
+        <!-- Cybersecurity Article -->
+        <a href="./insights/cybersecurity-amendment-2025/" class="hero-article">
+          <div class="hero-article-content">
+            <div style="max-width: 700px; text-align: left;"> <!-- Reduced Title Box Width -->
+              <h3 class="hero-article-title">Ghana's Cybersecurity (Amendment) Bill 2025: What businesses and professionals need to know</h3>
+            </div>
+            <div class="hero-article-read-more">
+              <p style="font-size: 14px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--white); margin: 0; display: flex; align-items: center; justify-content: flex-start; gap: 8px;">Read more <span style="opacity: 0.6;">&rarr;</span></p>
+            </div>
+          </div>
+        </a>
+
+        <!-- Employment Article -->
+        <a href="./insights/workplace-pensions-2026/" class="hero-article">
+          <div class="hero-article-content">
+            <div style="max-width: 700px; text-align: left;"> <!-- Reduced Title Box Width -->
+              <h3 class="hero-article-title">Workplace Pensions 2026: International compliance guide for Ghana</h3>
+            </div>
+            <div class="hero-article-read-more">
+              <p style="font-size: 14px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--white); margin: 0; display: flex; align-items: center; justify-content: flex-start; gap: 8px;">Read more <span style="opacity: 0.6;">&rarr;</span></p>
+            </div>
+          </div>
+        </a>
+
+      </div>
+
+      <!-- Bullet Pagination -->
+      <div class="nextend-bullet-bar" id="heroPagination">
+        <div class="nextend-bullet active" data-index="0"></div>
+        <div class="nextend-bullet" data-index="1"></div>
+        <div class="nextend-bullet" data-index="2"></div>
+      </div>
+
+      <style>
+        /* 1. Stacked Layout & Horizontal Fade Transition */
+        .hero-article {
+          position: absolute;
+          inset: 0;
+          display: block;
+          text-decoration: none;
+          opacity: 0;
+          visibility: hidden;
+          transform: translateX(30px); /* Initial position for horizontal fade */
+          transition: opacity 0.6s ease, transform 0.6s ease, visibility 0.6s;
+          z-index: 1;
+        }
+        
+        .hero-article.active {
+          opacity: 1;
+          visibility: visible;
+          transform: translateX(0); /* Final position */
+          z-index: 2;
+        }
+
+        .hero-article-content {
+          background: transparent;
+          padding: 12px 18px;
+          min-height: 580px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          text-align: left;
+        }
+
+        .hero-article-title {
+          font-family: 'Arsenal', sans-serif;
+          font-size: 52px;
+          font-weight: 400;
+          color: var(--white);
+          margin: 0;
+          line-height: 1.2;
+        }
+
+        .hero-article-read-more {
+          margin-top: 40px;
+          opacity: 0;
+          transform: translateY(12px);
+          transition: all .4s;
+        }
+
+        .hero-article:hover .hero-article-read-more {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        /* Bullet Pagination Bar */
+        .nextend-bullet-bar {
+          position: absolute;
+          right: 48px;
+          bottom: -60px;
+          display: flex;
+          gap: 20px;
+          z-index: 100;
+        }
+
+        .nextend-bullet {
+          width: 80px;
+          height: 4px;
+          border-radius: 3px;
+          background: rgba(255, 255, 255, 0.4);
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          cursor: pointer;
+          transition: all 0.3s ease;
+        }
+
+        .nextend-bullet:hover {
+          background: rgba(255, 255, 255, 0.7);
+        }
+
+        .nextend-bullet.active {
+          background: var(--gold);
+          border-color: var(--gold);
+          transform: scaleX(1.15);
+        }
+
+        .hero-nav-btn {
+          position: absolute;
+          bottom: -40px;
+          background: none;
+          border: none;
+          color: var(--white);
+          cursor: pointer;
+          font-size: 32px;
+          z-index: 10;
+          transition: color .3s;
+        }
+        .hero-nav-btn:hover { color: var(--gold); }
+
+        /* Homepage Insights Override to match Expertise */
+        #insights {
+            background: var(--white);
+            padding: 100px 0;
+        }
+        #insights .section-title {
+            color: var(--text) !important;
+        }
+        #insights .insights-head .section-label {
+            color: var(--gold) !important;
+        }
+        #insights .ghost-link {
+            color: var(--muted);
+        }
+        #insights .ghost-link:hover {
+            color: var(--gold) !important;
+        }
+        #insights .insights-grid {
+            grid-template-columns: 1fr;
+            max-width: 800px; /* Make the single card not too wide */
+            margin: 0 auto; /* Center the single column */
+        }
+        #insights .ins-card {
+            background: var(--cream);
+            border-color: var(--divider);
+            padding: 48px;
+        }
+        #insights .ins-title {
+            color: var(--text);
+            font-size: 28px;
+        }
+        #insights .ins-excerpt {
+            color: var(--muted);
+            font-size: 16px;
+        }
+        #insights .ins-read {
+            color: var(--gold);
+            opacity: 0;
+            transform: translateY(8px);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        #insights .ins-card:hover .ins-read {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        #people .ghost-link {
+            color: var(--muted);
+        }
+        #people .ghost-link:hover {
+            color: var(--gold) !important;
+        }
+      </style>
+
+      <script>
+        (function() {
+          const articles = document.querySelectorAll('.hero-article');
+          const bullets = document.querySelectorAll('.nextend-bullet');
+          let currentIdx = 0;
+
+          if (articles.length > 0) {
+            function showArticle(index) {
+              // Update Articles
+              articles.forEach(a => a.classList.remove('active'));
+              articles[index].classList.add('active');
+              // Update Bullets
+              bullets.forEach(b => b.classList.remove('active'));
+              bullets[index].classList.add('active');
+              currentIdx = index;
+            }
+
+            // Bullet Click Events
+            bullets.forEach(bullet => {
+              bullet.addEventListener('click', () => {
+                const index = parseInt(bullet.getAttribute('data-index'));
+                showArticle(index);
+              });
+            });
+
+            // Auto-rotate articles every 6 seconds
+            setInterval(() => {
+              const nextIdx = (currentIdx + 1) % articles.length;
+              showArticle(nextIdx);
+            }, 6000);
+          }
+        })();
+      </script>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     FEATURED INTRO
+══════════════════════════════════════════════════════ -->
+<section class="featured-intro" style="padding: 100px 0; background: var(--white);">
+  <div class="inner">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;">
+      
+      <!-- Text Column -->
+      <div class="rv">
+        <h1 class="hero-headline" style="color: var(--navy); margin-bottom: 24px;">
+          <span class="h-line l1"><span class="h-inner">Precision in Law</span></span>
+          <span class="h-line l2"><span class="h-inner">Power in Strategy</span></span>
+          <span class="h-line l3"><span class="h-inner">Confidence in Outcomes</span></span>
+        </h1>
+        <p class="hero-sub" style="color: var(--text); margin-bottom: 32px; text-align: justify;">
+          We are a full service law firm with cross border capability and sectoral depth, advising institutions, investors, boards, and entrepreneurs on their most critical legal and commercial challenges. Our work sits at the intersection of regulation, capital, infrastructure, disputes, and governance, where risk is complex and decisions are consequential.
+
+          We combine rigorous legal thinking with commercial intelligence to deliver solutions that are technically exact, strategically sound, and built for execution. With deep Ghanaian insight and international perspective in transactions, disputes, and governance, we provide solutions that  are practical, resilient, and globally credible
+        </p>
+        <div class="hero-ctas">
+          <a href="./services/" class="btn-primary">Explore Our Expertise</a>
+          <!-- <a href="./about-us/" class="btn-ghost" style="border-color: var(--navy); color: var(--navy);">About the Firm</a> -->
+        </div>
+      </div>
+
+      <!-- Image Column -->
+      <div class="rv" style="transition-delay: 0.1s;">
+        <img src="./assets/images/site/blackstar_square.jpg" alt="BANN &amp; Associates - Precision in Law, Power in Strategy" style="width: 100%; display: block; border-radius: 4px;">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     EXPERTISE
+══════════════════════════════════════════════════════ -->
+<section class="expertise" id="expertise" aria-label="Expertise">
+  <div class="expertise-head">
+    <div class="rv">
+      <h2 class="section-title">Our Expertise</h2>
+    </div>
+    <a href="./services/" class="ghost-link rv" style="transition-delay:.1s">
+      View All Expertise Area <span class="ar">→</span>
+    </a>
+  </div>
+
+  <div class="expertise-grid">
+
+    <!-- Corporate & Commercial -->
+    <a href="./services/?practice=corporate" class="ex-card rv">
+      <div class="ex-bg" style="background-image: url('assets/images/site/corporate_commercial.jpeg'); background-size: cover; background-position: center;"></div><div class="ex-bg" style="background-image: url('./assets/images/site/Corporate_commercial.jpeg'); background-size: cover; background-position: center;"></div>
+      <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:.08" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="40" y="60" width="220" height="280" fill="none" stroke="#B8966E" stroke-width="1"/>
+        <rect x="80" y="100" width="140" height="200" fill="none" stroke="#B8966E" stroke-width=".6"/>
+        <line x1="150" y1="60" x2="150" y2="340" stroke="#B8966E" stroke-width=".4"/>
+      </svg>
+      <div class="ex-overlay"></div>
+      <span class="ex-arrow">↗</span>
+      <div class="ex-content">
+        <div class="ex-tag">Expertise Area</div>
+        <div class="ex-name">Corporate &amp;<br>Commercial</div>
+      </div>
+    </a>
+
+    <!-- Disputes -->
+    <a href="./services/?practice=disputes" class="ex-card rv" style="transition-delay:.06s">
+      <div class="ex-bg" style="background-image: url('./assets/images/site/disputes.jpeg'); background-size: cover; background-position: center;"></div>
+      <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:.08" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="150" cy="200" r="120" fill="none" stroke="#B8966E" stroke-width="1"/>
+        <circle cx="150" cy="200" r="70" fill="none" stroke="#B8966E" stroke-width=".6"/>
+        <line x1="40" y1="200" x2="260" y2="200" stroke="#B8966E" stroke-width=".4"/>
+      </svg>
+      <div class="ex-overlay"></div>
+      <span class="ex-arrow">↗</span>
+      <div class="ex-content">
+        <div class="ex-tag">Expertise Area</div>
+        <div class="ex-name">Disputes &amp;<br>Litigation</div>
+      </div>
+    </a>
+
+     <!-- Energy & Infrastructure -->
+    <a href="./services/?practice=energy" class="ex-card rv" style="transition-delay:.18s">
+      <div class="ex-bg" style="background-image: url('assets/images/site/hero_energy.png'); background-size: cover; background-position: center;"></div>
+      <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:.08" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <polygon points="150,50 270,330 30,330" fill="none" stroke="#B8966E" stroke-width="1"/>
+        <polygon points="150,110 230,310 70,310" fill="none" stroke="#B8966E" stroke-width=".6"/>
+        <line x1="30" y1="330" x2="270" y2="330" stroke="#B8966E" stroke-width=".4"/>
+      </svg>
+      <div class="ex-overlay"></div>
+      <span class="ex-arrow">↗</span>
+      <div class="ex-content">
+        <div class="ex-tag">Expertise Area</div>
+        <div class="ex-name">Energy &amp;<br>Infrastructure</div>
+      </div>
+
+    <!-- Family -->
+    <a href="./services/?practice=family" class="ex-card rv" style="transition-delay:.12s">
+      <div class="ex-bg" style="background-image: url('./assets/images/site/Family.jpeg'); background-size: cover; background-position: center;"></div>
+      <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:.08" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="110" cy="160" r="45" fill="none" stroke="#B8966E" stroke-width=".8"/>
+        <circle cx="190" cy="160" r="45" fill="none" stroke="#B8966E" stroke-width=".8"/>
+        <circle cx="150" cy="250" r="45" fill="none" stroke="#B8966E" stroke-width=".8"/>
+        <line x1="110" y1="160" x2="150" y2="250" stroke="#B8966E" stroke-width=".4"/>
+        <line x1="190 " y1="160" x2="150" y2="250" stroke="#B8966E" stroke-width=".4"/>
+      </svg>
+      <div class="ex-overlay"></div>
+      <span class="ex-arrow">↗</span>
+      <div class="ex-content">
+        <div class="ex-tag">Expertise Area</div>
+        <div class="ex-name">Family Wealth</div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     INSIGHTS
+══════════════════════════════════════════════════════ -->
+<section class="insights-sec" id="insights" aria-label="Latest insights">
+  <div class="inner">
+    <div class="insights-head">
+      <div>
+        <h2 class="section-title rv" style="transition-delay:.08s">Insights &amp; Analysis</h2>
+      </div>
+      <a href="insights/./" class="ghost-link rv" style="transition-delay:.14s">
+        All Insights <span class="ar">→</span>
+      </a>
+    </div>
+
+    <div class="insights-grid">
+      <a href="./insights/sports-law-2026/"
+         class="ins-card rv">
+        <span class="ins-type">Latest Article &middot; Sports Law &middot; 2026</span>
+        <h3 class="ins-title">Legal 500 Country Comparative Guides 2026: Ghana - Sports Law</h3>
+        <p class="ins-excerpt">BANN &amp; Associates contributes the authoritative Ghana Sports Law chapter to The Legal 500, exploring governance, athlete protection, commercial rights, sponsorship, investment, and dispute resolution.</p>
+        <span class="ins-read">Read More &rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     PEOPLE
+══════════════════════════════════════════════════════ -->
+<section class="people-sec" id="people" aria-label="Our people">
+  <div class="inner">
+    <div class="people-head">
+      <div>
+        <h2 class="section-title rv" style="transition-delay:.08s">The Team</h2>
+      </div>
+      <a href="./team/" class="ghost-link rv" style="color:var(--muted);transition-delay:.14s">
+        View All <span class="ar">→</span>
+      </a>
+    </div>
+    <div class="people-grid">
+
+      <!-- Founding Partners -->
+      <a href="team/edward-boateng-addo/" class="person-card rv">
+        <div class="person-photo" style="background-image: url('assets/images/site/Edward2.jpg'), url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop');"></div>
+        <div class="person-overlay"></div>
+        <div class="person-info">
+          <div class="person-role">Managing Partner</div>
+          <div class="person-name">Edward Boateng-Addo</div>
+        </div>
+      </a>
+
+      <a href="team/cleopatra-nsiah-nketiah/" class="person-card rv" style="transition-delay:.07s">
+        <div class="person-photo" style="background-image: url('assets/images/site/New%20Cleo%20-%20Portrait_2_Office_High_Resolution.jpg'); background-size: 135%; background-position: 50% 27%;"></div>
+        <div class="person-overlay"></div>
+        <div class="person-info">
+          <div class="person-role">Founding Partner</div>
+          <div class="person-name">Cleopatra Nsiah Nketiah</div>
+        </div>
+      </a>
+
+      <!-- Associates & Staff -->
+      <a href="team/freda-nsarkoh/" class="person-card support rv" style="transition-delay:.14s">
+        <div class="person-photo" style="background-image: url('assets/images/site/New%20Freda%20-%20Portrait_1_High_Resolution.jpg'); background-size: 225%; background-position: 47% 23%;"></div>
+        <div class="person-overlay"></div>
+        <div class="person-info">
+          <div class="person-role">Associate</div>
+          <div class="person-name">Freda Nsarkoh</div>
+        </div>
+      </a>  
+
+      <a href="team/alberta-fosua-mensah/" class="person-card support rv" style="transition-delay:.21s">
+        <div class="person-photo" style="background-image: url('assets/images/site/hero_alberta2.jpg'), url('assets/images/site/Alberta3.jpg');"></div>
+        <div class="person-overlay"></div>
+        <div class="person-info">
+          <div class="person-role">Operations Manager</div>
+          <div class="person-name">Alberta Fosua Mensah</div>
+        </div>
+      </a>
+
+      <a href="team/joseph-kudzordzinawo/" class="person-card support rv" style="transition-delay:.28s">
+        <div class="person-photo" style="background-image: url('assets/images/site/hero_joseph1.jpg'),  url('assets/images/site/Joeseph2.jpg');"></div>
+        <div class="person-overlay"></div>
+        <div class="person-info">
+          <div class="person-role">Head of Finance</div>
+          <div class="person-name">Joseph Kudzordzinawo</div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════════════════ -->
+<!-- Footer -->
+<footer role="contentinfo">
+  <div class="inner">
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <img src="assets/images/site/logo.png"
+             alt="BANN &amp; Associates Logo"
+             class="f-logo"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <span class="f-logo-text" style="display:none">BANN &amp; Associates</span>
+        <p class="footer-tagline">"Precision in Law,<br>Power in Strategy."</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/share/14XpvMssyut/" class="f-social-btn" target="_blank" rel="noopener" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M160 96C124.7 96 96 124.7 96 160L96 480C96 515.3 124.7 544 160 544L258.2 544L258.2 398.2L205.4 398.2L205.4 320L258.2 320L258.2 286.3C258.2 199.2 297.6 158.8 383.2 158.8C399.4 158.8 427.4 162 438.9 165.2L438.9 236C432.9 235.4 422.4 235 409.3 235C367.3 235 351.1 250.9 351.1 292.2L351.1 320L434.7 320L420.3 398.2L351 398.2L351 544L480 544C515.3 544 544 515.3 544 480L544 160C544 124.7 515.3 96 480 96L160 96z"/></svg></a>
+          <a href="https://www.linkedin.com/company/boateng-addo-n-nketiah-associates/" class="f-social-btn" target="_blank" rel="noopener" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M160 96C124.7 96 96 124.7 96 160L96 480C96 515.3 124.7 544 160 544L480 544C515.3 544 544 515.3 544 480L544 160C544 124.7 515.3 96 480 96L160 96zM165 266.2L231.5 266.2L231.5 480L165 480L165 266.2zM236.7 198.5C236.7 219.8 219.5 237 198.2 237C176.9 237 159.7 219.8 159.7 198.5C159.7 177.2 176.9 160 198.2 160C219.5 160 236.7 177.2 236.7 198.5zM413.9 480L413.9 376C413.9 351.2 413.4 319.3 379.4 319.3C344.8 319.3 339.5 346.3 339.5 374.2L339.5 480L273.1 480L273.1 266.2L336.8 266.2L336.8 295.4L337.7 295.4C346.6 278.6 368.3 260.9 400.6 260.9C467.8 260.9 480.3 305.2 480.3 362.8L480.3 480L413.9 480z"/></svg></a>
+          <a href="https://x.com/bannnassociates" class="f-social-btn" target="_blank" rel="noopener" aria-label="X / Twitter"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M160 96C124.7 96 96 124.7 96 160L96 480C96 515.3 124.7 544 160 544L480 544C515.3 544 544 515.3 544 480L544 160C544 124.7 515.3 96 480 96L160 96zM457.1 180L353.3 298.6L475.4 460L379.8 460L305 362.1L219.3 460L171.8 460L282.8 333.1L165.7 180L263.7 180L331.4 269.5L409.6 180L457.1 180zM419.3 431.6L249.4 206.9L221.1 206.9L392.9 431.6L419.3 431.6z"/></svg></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h5>Firm</h5>
+        <ul>
+          <li><a href="./about-us/">About Us</a></li>
+          <li><a href="./team/">Our People</a></li>
+          <li><a href="./insights/./">Publications</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Expertise</h5>
+        <ul>
+          <li><a href="./services/?practice=corporate">Corporate &amp; Commercial</a></li>
+          <li><a href="./services/?practice=disputes">Disputes &amp; Litigation</a></li>
+          <li><a href="./services/?practice=energy">Energy &amp; Infrastructure</a></li>
+          <li><a href="./services/?practice=family">Family Wealth</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-contact">
+        <h5>Contact</h5>
+        <p>8 Nii Bonne Crescent,
+          Dzorwulu - Accra, Ghana</p>
+        <p><strong>+233 303 966 156</strong></p>
+        <p><a href="mailto:info@bannandassociates.com">info@bannandassociates.com</a></p>
+        <p style="margin-top:14px"><a href="./contact/" class="btn-primary" style="font-size:10px;padding:10px 20px;">Get In Touch</a></p>
+        <ul style="margin-top:22px">
+          <li><a href="legal-notices/">Legal Notices</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+<!-- ══════════════════════════════════════════════════════
+     SCRIPTS
+══════════════════════════════════════════════════════ -->
+</footer>
+<div class="search-overlay" id="searchOverlay">
+  <button class="search-close" id="searchClose">&times;</button>
+  <div class="search-form">
+    <div style="position: relative;">
+      <input type="text" name="q" placeholder="Search insights, services, people..." autofocus autocomplete="off">
+      <div id="searchResults" class="search-results"></div>
+    </div>
+  </div>
+</div>
+
+<script src="js/shared.js"></script>
+</body>
+</html>

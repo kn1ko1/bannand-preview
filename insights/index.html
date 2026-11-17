@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Insights & Analysis – BANN &amp; Associates</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arsenal:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/shared.css">
+<style>
+/* Page Hero Background override for Insights Landing */
+.page-hero-media {
+  background-image: 
+    /* Reduced opacity from 0.8 to 0.4 */
+    radial-gradient(ellipse at 30% 50%, rgba(184, 150, 110, 0.1), rgba(11, 30, 56, 0.4)), 
+    /* Reduced opacity from 0.6 to 0.2 */
+    linear-gradient(to right, rgba(11,30,56, 0.2), rgba(11,30,56, 0.1) 50%, transparent),
+    url('../assets/images/site/WhatsApp_Image_2026-05-18_at_16.48.19_1).jpeg');
+  background-size: cover, cover, cover;
+  background-position: center, center, center;
+  /* Change multiply to screen or remove it for a cleaner look */
+  background-blend-mode: normal; 
+  filter: brightness(1.1) contrast(1.05); /* Boosts the actual image pixels */
+}
+
+/* Landing Page Specific Intro */
+.insights-intro { padding: 100px 0; background: var(--white); }
+.insights-intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+.insights-intro-copy p { font-size: 16px; line-height: 1.8; color: var(--text); margin-bottom: 24px; text-align: justify; }
+
+@media (max-width: 1024px) {
+  .insights-intro-grid { grid-template-columns: 1fr; gap: 40px; }
+  .insights-intro { padding: 80px 0; }
+}
+
+/* Insights Listing Override to match Homepage white/cream scheme */
+.insights-sec {
+  background: var(--white);
+  padding: 100px 0;
+}
+.insights-sec .section-label {
+  color: var(--gold) !important;
+}
+.insights-sec .section-title {
+  color: var(--text) !important;
+}
+.insights-sec .ins-card {
+  background: var(--cream);
+  border-color: var(--divider);
+  padding: 32px; /* Slightly compact for listing */
+}
+.insights-sec .ins-title {
+  color: var(--text);
+  font-size: 24px;
+}
+.insights-sec .ins-excerpt {
+  color: var(--muted);
+}
+.insights-sec .ins-read {
+  color: var(--gold);
+  opacity: 0;
+  transform: translateY(8px);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.insights-sec .ins-card:hover .ins-read {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav" role="navigation" aria-label="Main">
+  <a href=".././" class="nav-logo" aria-label="BANN & Associates home">
+    <img src="../assets/images/site/logo.png" alt="BANN & Associates Logo">
+  </a>
+  <ul class="nav-links">
+    <li><a href=".././">Home</a></li>
+    <li><a href="../about-us/">About Us</a></li>
+    <li><a href="../services/">Expertise</a></li>
+    <li><a href="././" class="active">Insights</a></li>
+    <li><a href="../team/">People</a></li>
+    <li><a href="../contact/">Contact Us</a></li>
+  </ul>
+  <div class="nav-search">
+    <button class="search-btn" id="searchToggle" aria-label="Open search">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    </button>
+  </div>
+  <div class="nav-burger" id="navBurger" aria-label="Toggle menu" role="button" tabindex="0">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<header class="page-hero">
+  <div class="page-hero-media" style="background-image: url('../assets/images/site/WhatsApp_Image_2026-05-18_at_16.48.19_(1).jpeg')"></div>
+  <div class="page-hero-pattern"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-body">
+    <h2 class="page-hero-title">Insights & Analysis</h2>
+  </div>
+</header>
+
+<!-- INTRO SECTION -->
+<section class="insights-intro">
+  <div class="inner">
+    <div class="insights-intro-grid">
+      <div class="insights-intro-copy rv">
+        <span class="section-label">Legal Perspectives</span>
+        <h2 class="section-title">Informed strategy for complex markets</h2>
+      </div>
+      <div class="insights-intro-copy rv" style="transition-delay: 0.1s;">
+        <p>Our Insights & Analysis provide foundational legal intelligence for institutions, investors, and entrepreneurs. We dissect regulatory shifts, regional market trends, and consequential legal developments to provide practical, high-stakes clarity.</p>
+        <p>Our insights are built on rigorous thinking and field-tested Ghanaian expertise.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- LISTING SECTION_Dark themed for consistency with Homepage) -->
+<section class="insights-sec">
+  <div class="inner">
+    <div class="rv" style="margin-bottom: 32px;">
+      <span class="section-label">Publications</span>
+    </div>
+    <div class="insights-grid">
+      <!-- Article 1 -->
+      <a href="./sports-law-2026/" class="ins-card rv">
+        <span class="ins-type">Sports Law · 2026</span>
+        <h3 class="ins-title">Legal 500 Country Comparative Guides 2026: Ghana - Sports Law</h3>
+        <p class="ins-excerpt">BANN &amp; Associates contributes the Ghana Sports Law chapter to Legal 500, covering Act 934, L.I. 2477, dispute resolution, integrity, club governance, and esports.</p>
+        <span class="ins-read">Read Article →</span>
+      </a>
+
+      <!-- Article 2 -->
+      <a href="./cybersecurity-amendment-2025/" class="ins-card rv" style="transition-delay: 0.1s;">
+        <span class="ins-type">Cyber Security · 2025</span>
+        <h3 class="ins-title">Ghana's Cybersecurity Amendment Bill 2025: What Businesses and Professionals Need to Know</h3>
+        <p class="ins-excerpt">A comprehensive analysis of the new amendments and their implications for businesses and professionals operating in Ghana's evolving digital economy.</p>
+        <span class="ins-read">Read Article →</span>
+      </a>
+
+      <!-- Article 3 -->
+      <a href="./workplace-pensions-2026/" class="ins-card rv" style="transition-delay: 0.2s;">
+        <span class="ins-type">Employment & Pensions · 2026</span>
+        <h3 class="ins-title">International Comparative Legal Guides: Workplace Pensions 2026 - Ghana Chapter</h3>
+        <p class="ins-excerpt">BANN & Associates contributes the authoritative Ghana chapter to the International Comparative Legal Guides series on workplace pensions.</p>
+        <span class="ins-read">Read Article →</span>
+      </a>
+
+      <!-- Article 4 -->
+      <a href="./vicarious-liability-2026/" class="ins-card rv" style="transition-delay: 0.3s;">
+        <span class="ins-type">Disputes & Liability · 2026</span>
+        <h3 class="ins-title">Who Pays for the "Wrong"? Understanding the Dynamics of Vicarious Liability</h3>
+        <p class="ins-excerpt">Comprehensive analysis of vicarious liability principles in Ghanaian law and practical implications for employers and organizations.</p>
+        <span class="ins-read">Read Article →</span>
+      </a>
+
+      <!-- Article 5 -->
+      <a href="./paris-olympics-2024/" class="ins-card rv" style="transition-delay: 0.4s;">
+        <span class="ins-type">Sports & Travel · 2024</span>
+        <h3 class="ins-title">Get Ready for the Paris 2024 Olympics with BANN & Associates</h3>
+        <p class="ins-excerpt">Expert guidance on visa requirements, travel documentation, and compliance information for attending the Paris 2024 Olympic and Paralympic Games.</p>
+        <span class="ins-read">Read Article →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer role="contentinfo">
+  <div class="inner">
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <img src="../assets/images/site/logo.png"
+             alt="BANN &amp; Associates Logo"
+             class="f-logo"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <span class="f-logo-text" style="display:none">BANN &amp; Associates</span>
+        <p class="footer-tagline">"Precision in Law,<br>Power in Strategy."</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/share/14XpvMssyut/" class="f-social-btn" target="_blank" rel="noopener" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M160 96C124.7 96 96 124.7 96 160L96 480C96 515.3 124.7 544 160 544L258.2 544L258.2 398.2L205.4 398.2L205.4 320L258.2 320L258.2 286.3C258.2 199.2 297.6 158.8 383.2 158.8C399.4 158.8 427.4 162 438.9 165.2L438.9 236C432.9 235.4 422.4 235 409.3 235C367.3 235 351.1 250.9 351.1 292.2L351.1 320L434.7 320L420.3 398.2L351 398.2L351 544L480 544C515.3 544 544 515.3 544 480L544 160C544 124.7 515.3 96 480 96L160 96z"/></svg></a>
+          <a href="https://www.linkedin.com/company/boateng-addo-n-nketiah-associates/" class="f-social-btn" target="_blank" rel="noopener" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M160 96C124.7 96 96 124.7 96 160L96 480C96 515.3 124.7 544 160 544L480 544C515.3 544 544 515.3 544 480L544 160C544 124.7 515.3 96 480 96L160 96zM165 266.2L231.5 266.2L231.5 480L165 480L165 266.2zM236.7 198.5C236.7 219.8 219.5 237 198.2 237C176.9 237 159.7 219.8 159.7 198.5C159.7 177.2 176.9 160 198.2 160C219.5 160 236.7 177.2 236.7 198.5zM413.9 480L413.9 376C413.9 351.2 413.4 319.3 379.4 319.3C344.8 319.3 339.5 346.3 339.5 374.2L339.5 480L273.1 480L273.1 266.2L336.8 266.2L336.8 295.4L337.7 295.4C346.6 278.6 368.3 260.9 400.6 260.9C467.8 260.9 480.3 305.2 480.3 362.8L480.3 480L413.9 480z"/></svg></a>
+          <a href="https://x.com/bannnassociates" class="f-social-btn" target="_blank" rel="noopener" aria-label="X / Twitter"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M160 96C124.7 96 96 124.7 96 160L96 480C96 515.3 124.7 544 160 544L480 544C515.3 544 544 515.3 544 480L544 160C544 124.7 515.3 96 480 96L160 96zM457.1 180L353.3 298.6L475.4 460L379.8 460L305 362.1L219.3 460L171.8 460L282.8 333.1L165.7 180L263.7 180L331.4 269.5L409.6 180L457.1 180zM419.3 431.6L249.4 206.9L221.1 206.9L392.9 431.6L419.3 431.6z"/></svg></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h5>Firm</h5>
+        <ul>
+          <li><a href="../about-us/">About Us</a></li>
+          <li><a href="../team/">Our People</a></li>
+           <li><a href="././">Publications</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Expertise</h5>
+        <ul>
+          <li><a href="../services/?practice=corporate">Corporate &amp; Commercial</a></li>
+          <li><a href="../services/?practice=disputes">Disputes &amp; Litigation</a></li>
+          <li><a href="../services/?practice=energy">Energy &amp; Infrastructure</a></li>
+          <li><a href="../services/?practice=family">Family Wealth</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-contact">
+        <h5>Contact</h5>
+        <p>8 Nii Bonne Crescent,
+        Dzorwulu - Accra, Ghana</p>
+        <p><strong>+233 303 966 156</strong></p>
+        <p><a href="mailto:info@bannandassociates.com">info@bannandassociates.com</a></p>
+        <p style="margin-top:14px"><a href="../contact/" class="btn-primary" style="font-size:10px;padding:10px 20px;">Get In Touch</a></p>
+        <ul style="margin-top:22px">
+          <li><a href="../legal-notices/">Legal Notices</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- SEARCH OVERLAY -->
+<div class="search-overlay" id="searchOverlay">
+  <button class="search-close" id="searchClose">&times;</button>
+  <div class="search-form">
+    <div style="position: relative;">
+      <input type="text" name="q" placeholder="Search insights, services, people..." autofocus autocomplete="off">
+      <div id="searchResults" class="search-results"></div>
+    </div>
+  </div>
+</div>
+
+<script src="../js/shared.js"></script>
+</body>
+</html>

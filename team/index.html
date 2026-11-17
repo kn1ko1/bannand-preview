@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Our People – BANN &amp; Associates</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arsenal:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/shared.css">
+<style>
+/* ─────────────────────────────────────────────────────────
+   PAGE-SPECIFIC STYLES
+───────────────────────────────────────────────────────── */
+/* team/ */
+.page-hero-media {
+  background-image: 
+    radial-gradient(ellipse at 30% 50%, rgba(184, 150, 110, 0.1), rgba(11, 30, 56, 0.4)),
+    linear-gradient(to right, rgba(11,30,56, 0.15), rgba(11,30,56, 0.1) 50%, transparent),
+    url('../assets/images/site/screen.png');
+  background-size: cover, cover, cover;
+  background-position: center, center, center;
+  /* Changed from multiply to normal to keep the image crisp */
+  background-blend-mode: normal; 
+  filter: brightness(1.1) contrast(1.05);
+}
+
+/* Hide person initials/monograms */
+.person-monogram { display: none; }
+
+/* Hero Intro Strip */
+.people-intro { padding: 80px 0; background: var(--white); }
+.people-intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.people-intro-copy p { 
+  font-size: 16px;          /* Increased to match others */
+  line-height: 1.85;       /* Increased to match others */
+  color: #3A4655;          /* Matching the About Us text color */
+  margin-bottom: 16px;
+  text-align: justify;       /* Justified text for a cleaner look */
+}
+.people-intro-copy p:last-child { margin-bottom: 0; }
+
+@media (max-width: 1024px) {
+  .people-intro { padding: 64px 0; }
+  .people-intro-grid { grid-template-columns: 1fr; gap: 48px; }
+}
+
+@media (max-width: 640px) {
+  .people-intro { padding: 50px 0; }
+  .people-intro-grid { gap: 32px; }
+}
+
+/* People grid responsiveness */
+@media (max-width: 640px) {
+  .people-grid { 
+    grid-template-columns: repeat(2, 1fr); gap: 16px;}
+}
+
+@media (max-width: 640px) {
+  .people-grid { grid-template-columns: 1fr; }
+}
+
+/* ─────────────────────────────────────────────────────────
+   NEW TIERED LAYOUT STYLES
+───────────────────────────────────────────────────────── */
+.people-grid { 
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 40px; 
+}
+
+.team-row { margin-bottom: 100px; }
+.team-row:last-child { margin-bottom: 0; }
+
+.team-row-header {
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.team-row-header .section-label { 
+  margin-bottom: 0; 
+  white-space: nowrap;
+}
+
+.team-row-header::after {
+  content: '';
+  height: 1px;
+  flex-grow: 1;
+  background: var(--divider);
+  opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+  .people-grid { 
+    grid-template-columns: repeat(2, 1fr); gap: 20px;}
+  .team-row { margin-bottom: 60px; }
+}
+
+/* Animation classes */
+.rv.in { opacity: 1; transform: translateY(0); }
+
+/* ─────────────────────────────────────────────────────────
+   HOVER EXPERTISE STYLES
+───────────────────────────────────────────────────────── */
+/* Ensure the info container moves up high enough to show the expertise */
+.person-info { 
+  transform: translateY(0) !important;
+}
+
+.person-card:hover .person-info {
+  transform: translateY(0) !important;
+}
+
+.person-expertise {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  margin-top: 0;
+}
+
+.person-card:hover .person-expertise {
+  opacity: 1;
+  max-height: 60px;
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(184, 150, 110, 0.4);
+}
+
+.person-expertise p {
+  font-size: 11px;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════
+     NAV
+══════════════════════════════════════════════════════ -->
+<nav class="nav" id="nav" role="navigation" aria-label="Main">
+  <a href=".././" class="nav-logo" aria-label="BANN & Associates home">
+    <img src="../assets/images/site/logo.png"
+         alt="BANN &amp; Associates Logo"
+         onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+    <span class="nav-logo-text" style="display:none">BANN &amp; Associates</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href=".././">Home</a></li>
+    <li><a href="../about-us/">About Us</a></li>
+    <li><a href="../services/">Expertise</a></li>
+    <li><a href="../insights/./">Insights</a></li>
+    <li><a href="../team/" class="active">People</a></li>
+    <li><a href="../contact/">Contact Us</a></li>
+  </ul>
+  <div class="nav-search">
+    <button class="search-btn" id="searchToggle" aria-label="Open search">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    </button>
+  </div>
+  <div class="nav-burger" id="navBurger" aria-label="Toggle menu" role="button" tabindex="0">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════════════════════
+     PAGE HERO
+══════════════════════════════════════════════════════ -->
+<header class="page-hero" aria-label="Our people">
+  <div class="page-hero-media" id="pageHeroMedia"></div>
+  <div class="page-hero-pattern"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-body">
+    <h1 class="page-hero-title">Our People</h1>
+  </div>
+</header>
+
+<!-- ══════════════════════════════════════════════════════
+     PEOPLE INTRO
+══════════════════════════════════════════════════════ -->
+<section class="people-intro" aria-label="Team overview">
+  <div class="inner">
+    <div class="people-intro-grid">
+      <div class="people-intro-copy rv">
+        <span class="section-label">Who We Are</span>
+        <p>Our team combines over two decades of Ghanaian and international legal experience with a shared commitment to excellence, discretion, and genuine client partnership. We are a close-knit team, which means every client receives the direct attention of the lawyers who know their matter best.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     PEOPLE DIRECTORY
+══════════════════════════════════════════════════════ -->
+<section class="people-sec" id="people" aria-label="Our people">
+  <div class="inner">
+    <div class="people-head">
+      <div>
+        <h2 class="section-title rv in" style="transition-delay:.08s">Meet The Team</h2>
+      </div>
+    </div>
+
+    <div class="people-directory">
+
+      <!-- ROW 1: Founding Partners -->
+      <div class="team-row">
+        <div class="team-row-header rv in">
+          <span class="section-label">Founding Partners</span>
+        </div>
+        <div class="people-grid">
+          <!-- Edward Boateng-Addo -->
+          <a href="../team/edward-boateng-addo/" class="person-card rv in">
+            <div class="person-photo" style="background-image: url('../assets/images/site/Edward2.jpg');"></div>
+            <div class="person-overlay"></div>
+            <div class="person-info">
+              <div class="person-role">Managing Partner</div>
+              <div class="person-name">Edward Boateng-Addo</div>
+            </div>
+          </a>
+          <!-- Cleopatra Nsiah Nketiah -->
+          <a href="../team/cleopatra-nsiah-nketiah/" class="person-card rv in" style="transition-delay:.1s">
+            <div class="person-photo" style="background-image: url('../assets/images/site/New%20Cleo%20-%20Portrait_2_Office_High_Resolution.jpg'); background-size: 135%; background-position: 50% 27%;"></div>
+            <div class="person-overlay"></div>
+            <div class="person-info">
+              <div class="person-role">Founding Partner</div>
+              <div class="person-name">Cleopatra Nsiah Nketiah</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- ROW 2: Associates -->
+      <div class="team-row">
+        <div class="team-row-header rv in">
+          <span class="section-label">Associates</span>
+        </div>
+        <div class="people-grid">
+          <!-- Freda Nsarkoh -->
+          <a href="../team/freda-nsarkoh/" class="person-card rv in">
+            <div class="person-photo" style="background-image: url('../assets/images/site/New%20Freda%20-%20Portrait_1_High_Resolution.jpg'); background-size: 225%; background-position: 47% 23%;"></div>
+            <div class="person-overlay"></div>
+            <div class="person-info">
+              <div class="person-role">Associate</div>
+              <div class="person-name">Freda Nsarkoh</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- ROW 3: Operations & Finance -->
+      <div class="team-row">
+        <div class="team-row-header rv in">
+          <span class="section-label">Operations & Administration</span>
+        </div>
+        <div class="people-grid">
+          <!-- Alberta Fosua Mensah -->
+          <a href="../team/alberta-fosua-mensah/" class="person-card rv in">
+            <div class="person-photo" style="background-image: url('../assets/images/site/hero_alberta.png');"></div>
+            <div class="person-overlay"></div>
+            <div class="person-info">
+              <div class="person-role">Operations & Admin Manager</div>
+              <div class="person-name">Alberta Fosua Mensah</div>
+            </div>
+          </a>
+          <!-- Joseph Kudzordzinawo -->
+          <a href="../team/joseph-kudzordzinawo/" class="person-card rv in" style="transition-delay:.1s">
+            <div class="person-photo" style="background-image: url('../assets/images/site/hero_joseph1.jpg');"></div>
+            <div class="person-overlay"></div>
+            <div class="person-info">
+              <div class="person-role">Head of Finance</div>
+              <div class="person-name">Joseph Kudzordzinawo</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════════════════ -->
+<footer role="contentinfo">
+  <div class="inner">
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <img src="../assets/images/site/logo.png"
+             alt="BANN &amp; Associates Logo"
+             class="f-logo"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <span class="f-logo-text" style="display:none">BANN &amp; Associates</span>
+        <p class="footer-tagline">"Precision in Law,<br>Power in Strategy."</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/share/14XpvMssyut/" class="f-social-btn" target="_blank" rel="noopener" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M160 96C124.7 96 96 124.7 96 160L96 480C96 515.3 124.7 544 160 544L258.2 544L258.2 398.2L205.4 398.2L205.4 320L258.2 320L258.2 286.3C258.2 199.2 297.6 158.8 383.2 158.8C399.4 158.8 427.4 162 438.9 165.2L438.9 236C432.9 235.4 422.4 235 409.3 235C367.3 235 351.1 250.9 351.1 292.2L351.1 320L434.7 320L420.3 398.2L351 398.2L351 544L480 544C515.3 544 544 515.3 544 480L544 160C544 124.7 515.3 96 480 96L160 96z"/></svg></a>
+          <a href="https://www.linkedin.com/company/boateng-addo-n-nketiah-associates/" class="f-social-btn" target="_blank" rel="noopener" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M160 96C124.7 96 96 124.7 96 160L96 480C96 515.3 124.7 544 160 544L480 544C515.3 544 544 515.3 544 480L544 160C544 124.7 515.3 96 480 96L160 96zM165 266.2L231.5 266.2L231.5 480L165 480L165 266.2zM236.7 198.5C236.7 219.8 219.5 237 198.2 237C176.9 237 159.7 219.8 159.7 198.5C159.7 177.2 176.9 160 198.2 160C219.5 160 236.7 177.2 236.7 198.5zM413.9 480L413.9 376C413.9 351.2 413.4 319.3 379.4 319.3C344.8 319.3 339.5 346.3 339.5 374.2L339.5 480L273.1 480L273.1 266.2L336.8 266.2L336.8 295.4L337.7 295.4C346.6 278.6 368.3 260.9 400.6 260.9C467.8 260.9 480.3 305.2 480.3 362.8L480.3 480L413.9 480z"/></svg></a>
+          <a href="https://x.com/bannnassociates" class="f-social-btn" target="_blank" rel="noopener" aria-label="X / Twitter"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M160 96C124.7 96 96 124.7 96 160L96 480C96 515.3 124.7 544 160 544L480 544C515.3 544 544 515.3 544 480L544 160C544 124.7 515.3 96 480 96L160 96zM447.3 263.3C447.3 350 381.3 449.9 260.7 449.9C223.5 449.9 189 439.1 160 420.5C165.3 421.1 170.4 421.3 175.8 421.3C206.5 421.3 234.7 410.9 257.2 393.3C228.4 392.7 204.2 373.8 195.9 347.8C206 349.3 215.1 349.3 225.5 346.6C195.5 340.5 173 314.1 173 282.2L173 281.4C181.7 286.3 191.9 289.3 202.6 289.7C193.6 283.7 186.2 275.6 181.1 266.1C176 256.6 173.3 245.9 173.4 235.1C173.4 222.9 176.6 211.7 182.3 202C214.6 241.8 263.1 267.8 317.5 270.6C308.2 226.1 341.5 190 381.5 190C400.4 190 417.4 197.9 429.4 210.7C444.2 207.9 458.4 202.4 471 194.9C466.1 210.1 455.8 222.9 442.2 231C455.4 229.6 468.2 225.9 480 220.8C471.1 233.9 459.9 245.5 447.1 254.8C447.3 257.6 447.3 260.5 447.3 263.3z"/></svg></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h5>Firm</h5>
+        <ul>
+          <li><a href="../about-us/">About Us</a></li>
+          <li><a href="../team/">Our People</a></li>
+          <li><a href="../insights/./">Publications</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Expertise</h5>
+        <ul>
+          <li><a href="../services/?practice=corporate">Corporate &amp; Commercial</a></li>
+          <li><a href="../services/?practice=disputes">Disputes &amp; Litigation</a></li>
+          <li><a href="../services/?practice=energy">Energy &amp; Infrastructure</a></li>
+          <li><a href="../services/?practice=family">Family Wealth</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-contact">
+        <h5>Contact</h5>
+        <p>8 Nii Bonne Crescent,
+          Dzorwulu - Accra, Ghana</p>
+        <p><strong>+233 303 966 156</strong></p>
+        <p><a href="mailto:info@bannandassociates.com">info@bannandassociates.com</a></p>
+        <p style="margin-top:14px"><a href="../contact/" class="btn-primary" style="font-size:10px;padding:10px 20px;">Get In Touch</a></p>
+        <ul style="margin-top:22px">
+          <li><a href="../legal-notices/">Legal Notices</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ── SEARCH OVERLAY ── -->
+<div class="search-overlay" id="searchOverlay">
+  <button class="search-close" id="searchClose">&times;</button>
+  <div class="search-form">
+    <form action="#" method="GET">
+      <input type="text" name="q" placeholder="Type to search..." autofocus>
+    </form>
+  </div>
+</div>
+
+<script src="../js/shared.js"></script>
+</body>
+</html>

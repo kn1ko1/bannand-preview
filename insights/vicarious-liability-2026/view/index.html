@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Document Viewer: Vicarious Liability – BANN &amp; Associates</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arsenal:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../css/shared.css">
+<style>
+/* ─────────────────────────────────────────────────────────
+   DOCUMENT VIEWER STYLES
+───────────────────────────────────────────────────────── */
+:root {
+  --editorial-cream: #FBFBFA;
+}
+
+body {
+  background: var(--editorial-cream);
+  color: var(--navy);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.doc-viewer-section {
+  padding: 120px 0 80px;
+  flex: 1;
+}
+
+.doc-viewer-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.doc-header-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--divider);
+}
+
+.doc-title-meta {
+  max-width: 760px;
+}
+
+.doc-eyebrow {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+
+.doc-title {
+  font-family: 'Arsenal', sans-serif;
+  font-size: clamp(24px, 3.2vw, 36px);
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.doc-meta {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.doc-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.doc-btn-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border: 1px solid var(--divider);
+  background: var(--white);
+  color: var(--navy);
+  font-family: 'Arsenal', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.doc-btn-back:hover {
+  border-color: var(--navy);
+  background: var(--navy);
+  color: var(--white);
+}
+
+.doc-btn-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  background: var(--navy);
+  color: var(--gold);
+  border: 1px solid var(--navy);
+  font-family: 'Arsenal', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.doc-btn-download svg {
+  transition: transform 0.25s ease;
+}
+
+.doc-btn-download:hover {
+  background: var(--gold);
+  color: var(--navy);
+  border-color: var(--gold);
+}
+
+.doc-btn-download:hover svg {
+  transform: translateY(2px);
+}
+
+.viewer-frame-card {
+  background: var(--white);
+  border: 1px solid var(--divider);
+  box-shadow: 0 16px 36px rgba(11, 30, 56, 0.06);
+  border-radius: 2px;
+  overflow: hidden;
+  height: 860px;
+  position: relative;
+}
+
+.viewer-frame-card iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+.viewer-fallback-notice {
+  padding: 24px;
+  background: #f7f7f5;
+  border: 1px solid var(--divider);
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.viewer-fallback-notice a {
+  color: var(--navy);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 900px) {
+  .doc-header-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .viewer-frame-card {
+    height: 640px;
+  }
+  .doc-viewer-container {
+    padding: 0 20px;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav" id="nav" role="navigation" aria-label="Main">
+  <a href="../../.././" class="nav-logo" aria-label="BANN &amp; Associates home">
+    <img src="../../../assets/images/site/logo.png"
+         alt="BANN &amp; Associates Logo"
+         onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+    <span class="nav-logo-text" style="display:none">BANN &amp; Associates</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="../../.././">Home</a></li>
+    <li><a href="../../../about-us/">About Us</a></li>
+    <li><a href="../../../services/">Expertise</a></li>
+    <li><a href="../../">Insights</a></li>
+    <li><a href="../../../team/">People</a></li>
+    <li><a href="../../../contact/">Contact Us</a></li>
+  </ul>
+  <div class="nav-search"><button class="search-btn" id="searchToggle" aria-label="Open search"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button></div>
+  <div class="nav-burger" id="navBurger" aria-label="Toggle menu" role="button" tabindex="0">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- Main Document Container -->
+<main class="doc-viewer-section">
+  <div class="doc-viewer-container">
+    
+    <div class="doc-header-bar">
+      <div class="doc-title-meta">
+        <span class="doc-eyebrow">Publications &bull; Corporate &amp; Liability</span>
+        <h1 class="doc-title">Who Pays for the "Wrong"? Understanding the Dynamics of Vicarious Liability</h1>
+        <p class="doc-meta">Authored by <strong>BANN &amp; Associates</strong> &bull; June 2026</p>
+      </div>
+      
+      <div class="doc-actions">
+        <a href="../" class="doc-btn-back">&larr; Read Article</a>
+        <a href="../../../assets/documents/Vicarous%20Libility%20Article.pdf" download="Vicarious_Liability_BANN_Associates.pdf" class="doc-btn-download">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download PDF
+        </a>
+      </div>
+    </div>
+
+    <!-- Embedded Viewer Frame -->
+    <div class="viewer-frame-card">
+      <iframe src="../../../assets/documents/Vicarous%20Libility%20Article.pdf#toolbar=1" title="Vicarious Liability PDF Viewer"></iframe>
+    </div>
+
+    <div class="viewer-fallback-notice">
+      <span>Having trouble previewing the PDF inside your browser?</span>
+      <a href="../../../assets/documents/Vicarous%20Libility%20Article.pdf" target="_blank">Open PDF in New Window &rarr;</a>
+    </div>
+
+  </div>
+</main>
+
+<!-- Footer -->
+<footer role="contentinfo">
+  <div class="inner">
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <img src="../../../assets/images/site/logo.png"
+             alt="BANN &amp; Associates Logo"
+             class="f-logo"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <span class="f-logo-text" style="display:none">BANN &amp; Associates</span>
+        <p class="footer-tagline">"Precision in Law,<br>Power in Strategy."</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/share/14XpvMssyut/" class="f-social-btn" target="_blank" rel="noopener" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M160 96C124.7 96 96 124.7 96 160L96 480C96 515.3 124.7 544 160 544L258.2 544L258.2 398.2L205.4 398.2L205.4 320L258.2 320L258.2 286.3C258.2 199.2 297.6 158.8 383.2 158.8C399.4 158.8 427.4 162 438.9 165.2L438.9 236C432.9 235.4 422.4 235 409.3 235C367.3 235 351.1 250.9 351.1 292.2L351.1 320L434.7 320L420.3 398.2L351 398.2L351 544L480 544C515.3 544 544 515.3 544 480L544 160C544 124.7 515.3 96 480 96L160 96z"/></svg></a>
+          <a href="https://www.linkedin.com/company/boateng-addo-n-nketiah-associates/" class="f-social-btn" target="_blank" rel="noopener" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M160 96C124.7 96 96 124.7 96 160L96 480C96 515.3 124.7 544 160 544L480 544C515.3 544 544 515.3 544 480L544 160C544 124.7 515.3 96 480 96L160 96zM165 266.2L231.5 266.2L231.5 480L165 480L165 266.2zM236.7 198.5C236.7 219.8 219.5 237 198.2 237C176.9 237 159.7 219.8 159.7 198.5C159.7 177.2 176.9 160 198.2 160C219.5 160 236.7 177.2 236.7 198.5zM413.9 480L413.9 376C413.9 351.2 413.4 319.3 379.4 319.3C344.8 319.3 339.5 346.3 339.5 374.2L339.5 480L273.1 480L273.1 266.2L336.8 266.2L336.8 295.4L337.7 295.4C346.6 278.6 368.3 260.9 400.6 260.9C467.8 260.9 480.3 305.2 480.3 362.8L480.3 480L413.9 480z"/></svg></a>
+          <a href="https://x.com/bannnassociates" class="f-social-btn" target="_blank" rel="noopener" aria-label="X / Twitter"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M160 96C124.7 96 96 124.7 96 160L96 480C96 515.3 124.7 544 160 544L480 544C515.3 544 544 515.3 544 480L544 160C544 124.7 515.3 96 480 96L160 96zM457.1 180L353.3 298.6L475.4 460L379.8 460L305 362.1L219.3 460L171.8 460L282.8 333.1L165.7 180L263.7 180L331.4 269.5L409.6 180L457.1 180zM419.3 431.6L249.4 206.9L221.1 206.9L392.9 431.6L419.3 431.6z"/></svg></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h5>Firm</h5>
+        <ul>
+          <li><a href="../../../about-us/">About Us</a></li>
+          <li><a href="../../../team/">Our People</a></li>
+          <li><a href="../../">Publications</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Expertise</h5>
+        <ul>
+          <li><a href="../../../services/?practice=corporate">Corporate &amp; Commercial</a></li>
+          <li><a href="../../../services/?practice=disputes">Disputes &amp; Litigation</a></li>
+          <li><a href="../../../services/?practice=energy">Energy &amp; Infrastructure</a></li>
+          <li><a href="../../../services/?practice=family">Family Wealth</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-contact">
+        <h5>Contact</h5>
+        <p>8 Nii Bonne Crescent,<br>Dzorwulu - Accra, Ghana</p>
+        <p><strong>+233 303 966 156</strong></p>
+        <p><a href="mailto:info@bannandassociates.com">info@bannandassociates.com</a></p>
+        <p style="margin-top:14px"><a href="../../../contact/" class="btn-primary" style="font-size:10px;padding:10px 20px;">Get In Touch</a></p>
+        <ul style="margin-top:22px">
+          <li><a href="../../../legal-notices/">Legal Notices</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../../../js/shared.js"></script>
+</body>
+</html>

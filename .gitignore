@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+build/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Temporary files
+*.tmp
+*.log
+
+
+#Ignore vscode AI rules
+.github/instructions/codacy.instructions.md
+
+webstorm-ide-3f0501ec-4df4-4db9-be96-4c5bcd673144
+

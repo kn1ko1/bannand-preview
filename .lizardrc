@@ -1,0 +1,4 @@
+{
+  "max_nesting_depth": 5,
+  "max_line_per_function": 200
+}

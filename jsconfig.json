@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "lib": ["es2020", "dom", "dom.iterable"],
+    "target": "es2020",
+    "allowJs": true,
+    "checkJs": false,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["**/*.js"],
+  "exclude": ["node_modules", ".git"]
+}

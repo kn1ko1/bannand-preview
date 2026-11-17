@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Expertise – BANN & Associates</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arsenal:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/shared.css">
+<style>
+/* ─────────────────────────────────────────────────────────
+   OVERHAUL: MASTER-DETAIL MATRIX STYLES
+───────────────────────────────────────────────────────── */
+:root {
+  --editorial-cream: #FBFBFA; /* Luxury Off-White Canvas */
+  --spacing-expensive: 120px;
+}
+
+body {
+  background: var(--editorial-cream);
+  color: var(--navy);
+}
+
+/* ─────────────────────────────────────────────────────────
+     PAGE HERO
+───────────────────────────────────────────────────────── */  
+/* Hero Tweaks */
+.page-hero-media {
+  background-image: url('../assets/images/site/WhatsApp_Image_2026-05-18_at_16.48.26.jpeg');
+  filter: brightness(0.8) contrast(1.1);
+}
+
+/* Matrix Layout Wrapper */
+.practice-matrix-sec {
+  padding: var(--spacing-expensive) 0;
+  min-height: 800px;
+}
+
+.matrix-grid {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+/* Master Navigation_Side Panel) */
+.matrix-master {
+  position: sticky;
+  top: 120px;
+}
+
+.matrix-master h4 {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 32px;
+}
+
+.group-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.group-tab {
+  padding: 16px 0;
+  font-size: 16px;
+  font-family: 'Arsenal', sans-serif;
+  font-weight: 400;
+  color: var(--muted);
+  border: none;
+  border-bottom: 1px solid var(--divider);
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.group-tab::after {
+  content: '→';
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all 0.3s ease;
+  color: var(--gold);
+}
+
+.group-tab:hover {
+  color: var(--navy);
+  padding-left: 8px;
+}
+
+.group-tab:hover::after {
+  opacity: 0.5;
+  transform: translateX(0);
+}
+
+.group-tab.active {
+  color: var(--gold);
+  font-weight: 700;
+  padding-left: 0;
+}
+
+.group-tab.active::after {
+  content: '•';
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Mobile Dropdown Styling */
+.mobile-matrix-nav {
+  display: none;
+  width: 100%;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.matrix-select {
+  width: 100%;
+  padding: 18px 24px;
+  font-family: 'Arsenal', sans-serif;
+  font-size: 16px;
+  color: var(--navy);
+  background: var(--white);
+  border: 1px solid var(--gold-dim);
+  border-radius: 0;
+  appearance: none;
+  cursor: pointer;
+}
+
+.mobile-matrix-nav::after {
+  content: '↓';
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--gold);
+  pointer-events: none;
+}
+
+/* Detail Panel */
+.matrix-detail {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.matrix-detail.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.detail-header {
+  margin-bottom: 60px;
+  max-width: 800px;
+}
+
+.detail-title {
+  font-family: 'Arsenal', sans-serif;
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 400;
+  color: var(--navy);
+  margin-bottom: 24px;
+  line-height: 1.1;
+}
+
+.detail-desc {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+/* Service Matrix Cards - Styled like People Grid */
+.service-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.service-card {
+  background: var(--white);
+  padding: 40px;
+  border: 1px solid var(--divider);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  position: relative;
+  min-height: 280px;
+  overflow: hidden;
+}
+
+.service-card:hover {
+  border-color: var(--gold);
+  background: var(--editorial-cream);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(11, 30, 56, 0.08);
+}
+
+.service-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 1;
+  filter: grayscale(0%);
+  transition: opacity 0.6s ease, filter 0.6s ease;
+  z-index: 1;
+}
+
+.service-card:hover .service-bg {
+  opacity: 0;
+  filter: grayscale(0%);
+}
+
+.service-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(11, 30, 56, 0.2) 0%, transparent 100%);
+  opacity: 1;
+  transition: opacity 0.6s ease;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.service-card:hover .service-overlay {
+  opacity: 1;
+}
+
+.service-content {
+  position: relative;
+  z-index: 3;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-num {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.service-name {
+  font-family: 'Arsenal', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.2;
+  margin-top: auto;
+  margin-bottom: 0px;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), color 0.4s ease;
+}
+
+.service-card:hover .service-name {
+  color: var(--navy);
+  transform: translateY(-20px);
+}
+
+.service-body {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--muted);
+  text-align: justify;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.5s ease, color 0.4s ease;
+  pointer-events: none;
+}
+
+.service-card:hover .service-body {
+  transform: translateY(-10px);
+  opacity: 1;
+  color: var(--navy);
+}
+
+/* Economic Intelligence Tags */
+.service-tags {
+  display: flex;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.tag {
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 4px 8px;
+  background: var(--cream);
+  color: var(--gold);
+  border-radius: 2px;
+}
+
+/* Intelligence Node_Related Insights) */
+.intel-node {
+  margin-top: 80px;
+  padding-top: 60px;
+  border-top: 1px solid var(--divider);
+}
+
+.intel-node h5 {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--gold);
+  margin-bottom: 24px;
+}
+
+.intel-links {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.intel-link {
+  font-size: 14px;
+  color: var(--navy);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: color 0.2s;
+}
+
+.intel-link:hover { color: var(--gold); }
+
+@media (max-width: 1024px) {
+  .matrix-grid { grid-template-columns: 1fr; gap: 40px; }
+  .matrix-master { display: none; }
+  .mobile-matrix-nav { display: block; }
+  .service-cards-grid { grid-template-columns: 1fr; }
+}
+
+</style>
+</head>
+<body class="services-page">
+
+<nav class="nav" id="nav" role="navigation">
+  <!-- Reusing shared navigation -->
+  <a href=".././" class="nav-logo">
+    <img src="../assets/images/site/logo.png" alt="BANN & Associates Logo">
+  </a>
+  <ul class="nav-links">
+    <li><a href=".././">Home</a></li>
+    <li><a href="../about-us/">About Us</a></li>
+    <li><a href="../services/" class="active">Expertise</a></li>
+    <li><a href="../insights/./">Insights</a></li>
+    <li><a href="../team/">People</a></li>
+    <li><a href="../contact/">Contact Us</a></li>
+  </ul>
+  <div class="nav-search">
+    <button class="search-btn" id="searchToggle" aria-label="Open search">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    </button>
+  </div>
+  <div class="nav-burger" id="navBurger"><span></span><span></span><span></span></div>
+</nav>
+
+<header class="page-hero">
+  <div class="page-hero-media"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-body">
+    <h1 class="page-hero-title">Our Expertise</h1>
+  </div>
+</header>
+
+<main class="practice-matrix-sec">
+  <div class="inner">
+    <div class="matrix-grid">
+      
+      <!-- Master Navigation -->
+      <aside class="matrix-master">
+        <h4>Expertise Groups</h4>
+        <nav class="group-nav" id="groupNav">
+          <!-- Populated by JS -->
+        </nav>
+      </aside>
+
+      <!-- Detail Panel -->
+      <section class="matrix-detail" id="matrixDetail">
+        
+        <!-- Mobile Dropdown -->
+        <div class="mobile-matrix-nav">
+          <select class="matrix-select" id="matrixSelect" onchange="updateMatrix(this.value)">
+            <!-- Populated by JS -->
+          </select>
+        </div>
+
+        <div class="detail-header">
+          <h2 class="detail-title" id="detailTitle"></h2>
+          <p class="detail-desc" id="detailDesc"></p>
+        </div>
+
+        <div class="service-cards-grid" id="serviceGrid">
+          <!-- Populated by JS -->
+        </div>
+
+        <div class="intel-node" id="intelNode">
+          <h5>Economic Intelligence & Briefs</h5>
+          <div class="intel-links" id="intelLinks">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</main>
+
+<script>
+/**
+ * DATA MATRIX
+ * Relational model mapping Specialist Expertise to Expertise Groups
+ */
+const MATRIX_DATA = {
+  corporate: {
+    title: "Corporate & Commercial",
+    desc: "Comprehensive support for the lifecycle of a business, from market entry and secretarial compliance to complex commercial contracting and intellectual property protection.",
+    services: [1, 4, 6, 10, 11, 12, 14],
+    insights: [
+      { title: "Legal 500: Ghana Sports Law 2026", url: "./insights/sports-law-2026/" },
+      { title: "Ghana's Cybersecurity Bill 2025", url: "./insights/cybersecurity-amendment-2025/" },
+      { title: "Workplace Pensions 2026 Guide", url: "./insights/workplace-pensions-2026/" }
+    ]
+  },
+  disputes: {
+    title: "Disputes & Litigation",
+    desc: "Strategic resolution of complex legal conflicts. We represent clients across commercial litigation, labour disputes, and arbitration, ensuring robust defense and proactive risk management.",
+    services: [2, 10, 14],
+    insights: [
+      { title: "Employer Vicarious Liability 2026", url: "./insights/vicarious-liability-2026/" }
+    ]
+  },
+  energy: {
+    title: "Energy & Infrastructure",
+    desc: "Navigating Ghana's resource sector with regulatory precision. We advise on mining licenses, extractive operations, and the property frameworks powering national infrastructure.",
+    services: [2, 5],
+    insights: []
+  },
+  family: {
+    title: "Family Wealth",
+    desc: "Protecting private wealth and personal legacies. We provide discreet, expert counsel on inheritance, estate planning, and complex inter-country adoption processes.",
+    services: [3, 7, 9],
+    insights: []
+  },
+  all: {
+    title: "All Expertise Areas",
+    desc: "A singular, bird's-eye view of BANN & Associates' full strategic capabilities. Explore our multi-disciplinary expertise across corporate, creative, and regulatory landscapes.",
+    services: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
+    insights: []
+  },
+};
+
+const SERVICES = {
+  1: { num: "01", name: "Company Secretarial & Compliance", image: "../assets/images/site/WhatsApp_Image_2026-05-18_at_16.48.47_(1).jpeg", body: "We assist companies with incorporation, statutory filings, company records, board documentation, governance processes and compliance with Ghana’s Companies Act." },
+  2: { num: "02", name: "Commercial Real Estate & Construction", image: "../assets/images/site/WhatsApp_Image_2026-05-18_at_16.48.23_(1).jpeg", body: "We bring extensive experience advising commercial property management and development companies on both contentious and non-contentious matters, including due diligence for land purchase and perfecting title in land." },
+  3: { num: "03", name: "Art Law", image: "../assets/images/site/abstract_painting.png", body: "We advise artists, galleries, collectors, dealers and institutions on art transactions, artist-gallery agreements, provenance, ownership, copyright, inheritance and art asset protection." },
+  4: { num: "04", name: "Commercial Documentation", image: "../assets/images/site/Corporate.jpeg", body: "We draft, review and negotiate contracts that_support business operations, protect client interests and reduce legal risk." },
+  5: { num: "05", name: "Mining, Minerals & Extractives", image: "../assets/images/site/WhatsApp_Image_2026-05-18_at_16.48.20_(1).jpeg", body: "We advise mining, exploration, and extractives companies on licensing, regulatory compliance, and commercial agreements within Ghana's resource sector, helping clients navigate the legal framework governing mineral rights and operations." },
+  6: { num: "06", name: "Corporate Immigration", image: "../assets/images/site/WhatsApp_Image_2026-05-18_at_16.48.17.jpeg", body: "We assist companies, investors and expatriate employees with work permits, residence permits, renewals and immigration compliance." },
+  7: { num: "07", name: "Family Wealth, Probate & Trust", image: "../assets/images/site/Family.jpeg", body: "We support individuals and families with wills, probate, letters of administration, trusts, powers of attorney, succession planning and family asset protection." },
+  8: { num: "08", name: "Entertainment, Media & Creating Industries", image: "../assets/images/site/Sports2.jpeg", body: "We advise artists, producers, managers, record labels, agencies, creatives and media businesses on contracts, IP, licensing, sponsorship and commercial arrangements" },
+  9: { num: "09", name: "Inter-Country Adoption", image: "../assets/images/site/WhatsApp_Image_2026-05-18_at_16.48.43.jpeg", body: "We give expert advice and assistance focused on surrogacy and intercountry adoption for each step of the application process, compliance with all local laws and procedural requirements, facilitating engagement with Ghana's Department of Social Welfare and other relevant government bodies and representation throughout the judicial stages of the application process." },
+  10: { num: "10", name: "Employment & HR Compliance", image: "../assets/images/site/WhatsApp_Image_2026-05-18_at_16.48.39.jpeg", body: "We advise employers and employees on employment contracts, workplace policies, disciplinary processes, termination, redundancy, labour disputes and HR compliance." },
+  11: { num: "11", name: "Data Protection & Privacy", image: "../assets/images/site/WhatsApp_Image_2026-05-18_at_16.48.41.jpeg", body: "Our firm delivers expert legal services across capital markets, corporate governance, projects and infrastructure, banking and finance, and competition law. We guide clients through complex transactions, regulatory compliance, and strategic risk management." },
+  12: { num: "12", name: "Regulatory & Market Entry", image: "../assets/images/site/screen_2.png", body: "We advise employers and employees on employment contracts, workplace policies, disciplinary processes, termination, redundancy, labour disputes and HR compliance." },
+  13: { num: "13", name: "Sports Law & Football Advisory", image: "../assets/images/site/Sports.jpeg", body: "We advise clubs, athletes, sports organisations, sponsors and investors on player contracts, sponsorships, governance, image rights, academy structures, disputes and commercial partnerships." },
+  14: { num: "14", name: "Intellectual Property", image: "../assets/images/site/WhatsApp_Image_2026-05-18_at_16.48.16.jpeg", body: "We assist with trademark registration, copyright advisory, licensing, assignments, brand protection and enforcement of intellectual property rights." },
+};
+
+/**
+ * MASTER-DETAIL CONTROLLER
+ */
+const groupNav = document.getElementById('groupNav');
+const matrixSelect = document.getElementById('matrixSelect');
+const detailPanel = document.getElementById('matrixDetail');
+
+function updateMatrix(key) {
+  const data = MATRIX_DATA[key];
+  if (!data) return;
+
+  // Update URL for state persistence
+  const url = new URL(window.location);
+  url.searchParams.set('practice', key);
+  window.history.pushState({}, '', url);
+
+  // Sync Mobile Select
+  if (matrixSelect.value !== key) matrixSelect.value = key;
+
+  // Transition Reset
+  detailPanel.classList.remove('active');
+
+  setTimeout(() => {
+    // Update Header
+    document.getElementById('detailTitle').textContent = data.title;
+    document.getElementById('detailDesc').textContent = data.desc;
+
+    // Update Tabs
+    document.querySelectorAll('.group-tab').forEach(t => t.classList.toggle('active', t.dataset.key === key));
+
+    // Update Service Grid
+    const grid = document.getElementById('serviceGrid');
+    grid.innerHTML = data.services.map(id => {
+      const s = SERVICES[id];
+      return `
+        <article class="service-card">
+          <div class="service-bg" style="background-image: url('${s.image}')"></div>
+          <div class="service-overlay"></div>
+          <div class="service-content">
+            <span class="service-num" aria-hidden="false">${s.num}</span>
+            <h3 class="service-name">${s.name}</h3>
+            <p class="service-body">${s.body}</p>
+          </div>
+        </article>
+      `;
+    }).join('');
+
+    // Update Insights
+    const intelLinks = document.getElementById('intelLinks');
+    const intelNode = document.getElementById('intelNode');
+    if (data.insights.length) {
+      intelNode.style.display = 'block';
+      intelLinks.innerHTML = data.insights.map(i => `
+        <a href="../${i.url}" class="intel-link">${i.title} →</a>
+      `).join('');
+    } else {
+      intelNode.style.display = 'none';
+    }
+
+    detailPanel.classList.add('active');
+  }, 300);
+}
+
+// Initialize Navigation (Tabs + Mobile Select)
+const matrixKeys = Object.keys(MATRIX_DATA);
+
+groupNav.innerHTML = matrixKeys.map(key => `
+  <button class="group-tab" data-key="${key}" onclick="updateMatrix('${key}')">
+    ${MATRIX_DATA[key].title}
+  </button>
+`).join('');
+
+matrixSelect.innerHTML = matrixKeys.map(key => `
+  <option value="${key}">${MATRIX_DATA[key].title}</option>
+`).join('');
+
+// URL Parameter Listener_Inbound Link Handling_
+function handleInbound() {
+  const params = new URLSearchParams(window.location.search);
+  const practice = params.get('practice') || 'all';
+  updateMatrix(practice);
+}
+
+document.addEventListener('DOMContentLoaded', handleInbound);
+</script>
+
+<!-- ══════════════════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════════════════ -->
+<!-- Footer -->
+<footer role="contentinfo">
+  <div class="inner">
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <img src="../assets/images/site/logo.png"
+             alt="BANN &amp; Associates Logo"
+             class="f-logo"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <span class="f-logo-text" style="display:none">BANN &amp; Associates</span>
+        <p class="footer-tagline">"Precision in Law,<br>Power in Strategy."</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/share/14XpvMssyut/" class="f-social-btn" target="_blank" rel="noopener" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M160 96C124.7 96 96 124.7 96 160L96 480C96 515.3 124.7 544 160 544L258.2 544L258.2 398.2L205.4 398.2L205.4 320L258.2 320L258.2 286.3C258.2 199.2 297.6 158.8 383.2 158.8C399.4 158.8 427.4 162 438.9 165.2L438.9 236C432.9 235.4 422.4 235 409.3 235C367.3 235 351.1 250.9 351.1 292.2L351.1 320L434.7 320L420.3 398.2L351 398.2L351 544L480 544C515.3 544 544 515.3 544 480L544 160C544 124.7 515.3 96 480 96L160 96z"/></svg></a>
+          <a href="https://www.linkedin.com/company/boateng-addo-n-nketiah-associates/" class="f-social-btn" target="_blank" rel="noopener" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M160 96C124.7 96 96 124.7 96 160L96 480C96 515.3 124.7 544 160 544L480 544C515.3 544 544 515.3 544 480L544 160C544 124.7 515.3 96 480 96L160 96zM165 266.2L231.5 266.2L231.5 480L165 480L165 266.2zM236.7 198.5C236.7 219.8 219.5 237 198.2 237C176.9 237 159.7 219.8 159.7 198.5C159.7 177.2 176.9 160 198.2 160C219.5 160 236.7 177.2 236.7 198.5zM413.9 480L413.9 376C413.9 351.2 413.4 319.3 379.4 319.3C344.8 319.3 339.5 346.3 339.5 374.2L339.5 480L273.1 480L273.1 266.2L336.8 266.2L336.8 295.4L337.7 295.4C346.6 278.6 368.3 260.9 400.6 260.9C467.8 260.9 480.3 305.2 480.3 362.8L480.3 480L413.9 480z"/></svg></a>
+          <a href="https://x.com/bannnassociates" class="f-social-btn" target="_blank" rel="noopener" aria-label="X / Twitter"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M160 96C124.7 96 96 124.7 96 160L96 480C96 515.3 124.7 544 160 544L480 544C515.3 544 544 515.3 544 480L544 160C544 124.7 515.3 96 480 96L160 96zM457.1 180L353.3 298.6L475.4 460L379.8 460L305 362.1L219.3 460L171.8 460L282.8 333.1L165.7 180L263.7 180L331.4 269.5L409.6 180L457.1 180zM419.3 431.6L249.4 206.9L221.1 206.9L392.9 431.6L419.3 431.6z"/></svg></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h5>Firm</h5>
+        <ul>
+          <li><a href="../about-us/">About Us</a></li>
+          <li><a href="../team/">Our People</a></li>
+           <li><a href="../insights/./">Publications</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Expertise</h5>
+        <ul>
+          <li><a href="../services/?practice=corporate">Corporate &amp; Commercial</a></li>
+          <li><a href="../services/?practice=disputes">Disputes &amp; Litigation</a></li>
+          <li><a href="../services/?practice=energy">Energy &amp; Infrastructure</a></li>
+          <li><a href="../services/?practice=family">Family Wealth</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-contact">
+        <h5>Contact</h5>
+        <p>8 Nii Bonne Crescent, 
+          Dzorwulu - Accra, Ghana</p>
+        <p><strong>+233 303 966 156</strong></p>
+        <p><a href="mailto:info@bannandassociates.com">info@bannandassociates.com</a></p>
+        <p style="margin-top:14px"><a href="../contact/" class="btn-primary" style="font-size:10px;padding:10px 20px;">Get In Touch</a></p>
+        <ul style="margin-top:22px">
+          <li><a href="../legal-notices/">Legal Notices</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ── SEARCH OVERLAY ── -->
+<div class="search-overlay" id="searchOverlay">
+  <button class="search-close" id="searchClose">&times;</button>
+  <div class="search-form">
+    <form action="#" method="GET">
+      <input type="text" name="q" placeholder="Type to search..." autofocus>
+    </form>
+  </div>
+</div>
+
+<script src="../js/shared.js"></script>
+</body>
+</html>

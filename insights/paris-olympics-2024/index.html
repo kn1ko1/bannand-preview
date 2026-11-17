@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Get Ready for the Paris 2024 Olympics with BANN & Associates – Travel & Visa Guidance</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arsenal:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/shared.css">
+<style>
+
+.article-section {
+  padding: 92px 0;
+}
+.article-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 60px;
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 80px;
+  align-items: start;
+}
+.article-main {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+.article-block {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.article-h2 {
+  font-family: 'Arsenal', sans-serif;
+  font-size: clamp(28px, 3vw, 40px);
+  font-weight: 400;
+  color: var(--navy);
+  line-height: 1.2;
+}
+.article-h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--gold);
+  margin-top: 12px;
+}
+.article-h3 {
+  font-family: 'Arsenal', sans-serif;
+  font-size: clamp(20px, 2vw, 26px);
+  font-weight: 400;
+  color: var(--text);
+  line-height: 1.3;
+}
+.article-p {
+  font-size: 16px;
+  line-height: 1.85;
+  color: #2C3A4A;
+  text-align: justify;
+}
+.article-highlight {
+  background: #F0F0F0;
+  border-left: 4px solid var(--gold);
+  padding: 28px 32px;
+  margin: 28px 0;
+}
+.article-highlight h4 {
+  font-family: 'Arsenal', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 12px;
+}
+.article-highlight p {
+  font-size: 15px;
+  line-height: 1.75;
+  color: #3A4655;
+}
+.article-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 16px 0;
+  padding-left: 0;
+  border-left: 2px solid var(--divider);
+  padding-left: 28px;
+}
+.article-list li {
+  font-size: 14px;
+  line-height: 1.75;
+  color: #3A4655;
+}
+.article-list li strong {
+  font-weight: 700;
+  color: var(--navy);
+}
+
+/* Sidebar */
+.article-sidebar {
+  position: sticky;
+  top: 110px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+.sidebar-block h4 {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--divider);
+}
+.service-tags {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.service-tag {
+  display: inline-block;
+  padding: 8px 12px;
+  border: 1px solid var(--divider);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  transition: border-color .2s, color .2s;
+}
+.service-tag:hover { border-color: var(--gold); color: var(--gold); }
+.cta-box {
+  background: var(--navy);
+  color: var(--white);
+  padding: 32px;
+  text-align: center;
+}
+.cta-box h4 {
+  font-family: 'Arsenal', sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--white);
+  margin-bottom: 12px;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.cta-box p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: rgba(255,255,255,.7);
+  margin-bottom: 20px;
+}
+.cta-box .btn-primary {
+  width: 100%;
+}
+
+/* Next Article Selection - Dark Variation */
+.next-article {
+  background: var(--navy); /* Deep Navy background */
+  padding: 120px 0;
+  border-top: none;
+  overflow: hidden;
+}
+.next-article-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 80px;
+}
+.next-article-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold); /* Highlighted Gold Label */
+  margin-bottom: 20px;
+}
+.next-article-text h3 {
+  font-family: 'Arsenal', sans-serif;
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 400;
+  color: var(--white); /* Clean White Headlines */
+  line-height: 1.1;
+  transition: opacity .3s, transform .3s;
+  cursor: pointer;
+}
+.next-article-arrow {
+  font-size: 48px;
+  color: var(--gold); /* Gold arrow for visual pop */
+  font-weight: 300;
+  transition: transform .4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Hover Effects */
+.next-article-inner:hover .next-article-arrow {
+  transform: translateX(20px);
+}
+.next-article-inner:hover .next-article-text h3 {
+  opacity: 0.8;
+}
+
+@media (max-width: 820px) {
+  .next-article { padding: 80px 0; }
+  .next-article-inner { flex-direction: column; align-items: flex-start; gap: 32px; }
+  .next-article-arrow { font-size: 36px; }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .article-container { grid-template-columns: 1fr; gap: 48px; }
+  .article-sidebar { position: static; top: auto; }
+}
+
+@media (max-width: 820px) {
+  .article-section { padding: 64px 0; }
+  .article-container { padding: 0 36px; }
+  .next-article-inner { flex-direction: column; align-items: flex-start; gap: 24px; }
+}
+
+@media (max-width: 560px) {
+  .article-section { padding: 48px 0; }
+  .article-container { padding: 0 20px; }
+  .article-hero-body { padding: 0 20px 36px; }
+  .article-hero-title { font-size: clamp(28px, 4vw, 44px); }
+}
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav" id="nav" role="navigation" aria-label="Main">
+  <a href="../.././" class="nav-logo" aria-label="BANN & Associates home">
+    <img src="../../assets/images/site/logo.png"
+         alt="BANN &amp; Associates Logo"
+         onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+    <span class="nav-logo-text" style="display:none">BANN &amp; Associates</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="../.././">Home</a></li>
+    <li><a href="../../about-us/">About Us</a></li>
+    <li><a href="../../services/">Expertise</a></li>
+    <li><a href=".././">Insights</a></li>
+    <li><a href="../../team/">People</a></li>
+    <li><a href="../../contact/">Contact Us</a></li>
+  </ul>
+  <div class="nav-search"><button class="search-btn" id="searchToggle" aria-label="Open search"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button></div>
+  <div class="nav-burger" id="navBurger" aria-label="Toggle menu" role="button" tabindex="0">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- Article Hero -->
+<header class="page-hero" role="banner">
+  <div class="page-hero-media" style="background-image: url('../../assets/images/site/hero_olympia.jpg')" aria-hidden="true"></div>
+  <div class="page-hero-pattern"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-body">
+    <span class="page-hero-eyebrow is-boxed">Sports & Travel</span>
+    <h1 class="page-hero-title">Get Ready for the Paris 2024 Olympics with BANN & Associates</h1>
+    <div class="page-hero-meta">
+      <span>June 4, 2026</span>
+      <span>2 min read</span>
+    </div>
+  </div>
+</header>
+
+<!-- Article Content -->
+<section class="article-section">
+  <div class="article-container">
+    
+    <!-- Main Content -->
+    <div class="article-main">
+      
+      <!-- Intro -->
+      <div class="article-block">
+        <p class="article-p">The much-anticipated Paris 2024 Olympic and Paralympic Games are approaching, and it's essential to ensure you have the right travel documents before planning your journey to France. Below, we provide crucial information from the French Embassy to help you navigate the visa application process efficiently and successfully.</p>
+      </div>
+
+      <!-- Key Dates -->
+      <div class="article-block">
+        <h2 class="article-h2">Key Olympic and Paralympic Dates</h2>
+        <ul class="article-list">
+          <li><strong>Olympic Games:</strong> 26 July – 11 August 2024</li>
+          <li><strong>Paralympic Games:</strong> 28 August – 8 September 2024</li>
+        </ul>
+        <p class="article-p">Plan your travel accordingly to ensure you arrive with sufficient time to obtain any necessary visa documentation.</p>
+      </div>
+
+      <!-- Visa Categories -->
+      <div class="article-block">
+        <h2 class="article-h2">Visa Categories & Requirements</h2>
+        
+        <h3 class="article-h3">Accredited Persons "Olympic Family"</h3>
+        <p class="article-p">This category includes athletes, media personnel, officials, and other individuals with accreditation applications submitted to the Olympic or Paralympic Committee.</p>
+        <ul class="article-list">
+          <li><strong>Application Process:</strong> Applications can be made at any VFS Global Centre without prior appointment</li>
+          <li><strong>Required Documents:</strong> OCOG "Certificate" and valid travel document</li>
+          <li><strong>Fees:</strong> No visa fee or service fee required</li>
+        </ul>
+
+        <h3 class="article-h3">Guests of the OCOG</h3>
+        <p class="article-p">Individuals invited by the Olympic Committee must follow the ordinary visa application procedure.</p>
+        <ul class="article-list">
+          <li><strong>Application Process:</strong> Register via France-Visas portal</li>
+          <li><strong>Required Documents:</strong> "Letter of Invitation" from OCOG, valid travel document, and supporting documents from registration receipt</li>
+          <li><strong>Fees:</strong> No visa fee or service fee required</li>
+        </ul>
+
+        <h3 class="article-h3">Volunteers</h3>
+        <p class="article-p">Individuals volunteering for the Olympic or Paralympic Games have a streamlined application process.</p>
+        <ul class="article-list">
+          <li><strong>Application Process:</strong>Register via France-Visas portal</li>
+          <li><strong>Required Documents:</strong>"Letter of Attestation of Voluntary Service" from COJO, valid travel documents, and supporting documents</li>
+          <li><strong>Fees:</strong> Visa and service fees apply standard rates</li>
+        </ul>
+
+        <h3 class="article-h3">Spectators</h3>
+        <p class="article-p">General visitors attending the Games must follow the normal visa application procedure for short-stay or transit visas, depending on their circumstances.</p>
+      </div>
+
+      <!-- Applying from Ghana -->
+      <div class="article-block">
+        <h2 class="article-h2">Applying for a Visa from Ghana</h2>
+        <div class="article-highlight">
+          <h4>The Application Process</h4>
+          <p>Visa applications in Ghana must be submitted via the VFS Global website, including a pre-payment of the service fee. The French Embassy in Accra examines all applications and is the sole authority for visa decisions. All applications for metropolitan France are processed by the Accra embassy, while applications for overseas French territories are handled according to the destination territory's requirements.</p>
+        </div>
+      </div>
+
+      <!-- Types of Short-Stay Visas -->
+      <div class="article-block">
+        <h2 class="article-h2">Types of Short-Stay Visas Accepted</h2>
+        <ul class="article-list">
+          <li><strong>Official Missions:</strong> For diplomats and government officials</li>
+          <li><strong>Diplomatic and Service Passport Holders:</strong> Expedited processing available</li>
+          <li><strong>Transit Visas:</strong> For travelers passing through France</li>
+          <li><strong>Tourism Visas:</strong> For leisure travel and sporting events</li>
+          <li><strong>Business Visas:</strong> For business-related travel</li>
+          <li><strong>Study Visas:</strong> For educational purposes</li>
+        </ul>
+      </div>
+
+      <!-- Important Tips -->
+      <div class="article-block">
+        <h2 class="article-h2">Important Tips for Your Visa Application</h2>
+        <div class="article-highlight">
+          <h4>Timeline & Document Preparation</h4>
+          <ul class="article-list">
+            <li><strong>Short-stay visas:</strong> Submit applications at least 15 days before your departure</li>
+            <li><strong>Long-stay visas:</strong> Submit applications at least 1 month before your departure</li>
+            <li><strong>Early Submission:</strong> Applications can be submitted up to 6 months prior to your travel date</li>
+            <li><strong>Language Requirements:</strong> All documents must be in French or English, or accompanied by an official translation</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Contact & Support -->
+      <div class="article-block">
+        <h2 class="article-h2">Need Personalized Assistance?</h2>
+        <p class="article-p">For personalized visa assistance, document review, and travel documentation support, BANN & Associates can provide expert guidance to ensure a smooth and compliant travel experience.</p>
+        <p class="article-p" style="margin-top: 24px; font-weight: 600;">Have visa or travel documentation questions? <a href="../../contact/" style="color: var(--gold); text-decoration: none;"><br>Contact our team at +233 303 966 156 or info@bannandassociates.com</a></p>
+      </div>
+
+    </div>
+
+    <!-- Sidebar -->
+    <aside class="article-sidebar">
+      
+      <!-- Expertise Areas -->
+      <div class="sidebar-block">
+        <h4>Related Expertise</h4>
+        <div class="service-tags">
+          <a href="../../services/" class="service-tag">Travel</a>
+          <a href="../../services/" class="service-tag">Compliance</a>
+          <a href="../../services/" class="service-tag">Immigration</a>
+        </div>
+      </div>
+
+      <!-- CTA Box -->
+      <div class="cta-box">
+        <h4>Travel Documentation Support</h4>
+        <p>Expert guidance on visa applications, travel compliance, and documentation requirements for international travel.</p>
+        <a href="../../contact/" class="btn-primary">Get Expert Help</a>
+      </div>
+
+    </aside>
+
+  </div>
+</section>
+
+<!-- Next Article -->
+<section class="next-article">
+  <div class="next-article-inner">
+    <a href="../sports-law-2026/" id="nextArticleLink" style="text-decoration: none; flex: 1;">
+      <div class="next-article-text">
+        <div class="next-article-label">Next Article</div>
+        <h3 id="nextArticleTitle" style="transition: opacity .3s;">Legal 500 Country Comparative Guides 2026: Ghana - Sports Law</h3>
+      </div>
+    </a>
+    <div class="next-article-arrow" id="nextArticleBtn" style="cursor: pointer;">→</div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer role="contentinfo">
+  <div class="inner">
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <img src="../../assets/images/site/logo.png"
+             alt="BANN &amp; Associates Logo"
+             class="f-logo"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <span class="f-logo-text" style="display:none">BANN &amp; Associates</span>
+        <p class="footer-tagline">"Precision in Law,<br>Power in Strategy."</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/share/14XpvMssyut/" class="f-social-btn" target="_blank" rel="noopener" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M160 96C124.7 96 96 124.7 96 160L96 480C96 515.3 124.7 544 160 544L258.2 544L258.2 398.2L205.4 398.2L205.4 320L258.2 320L258.2 286.3C258.2 199.2 297.6 158.8 383.2 158.8C399.4 158.8 427.4 162 438.9 165.2L438.9 236C432.9 235.4 422.4 235 409.3 235C367.3 235 351.1 250.9 351.1 292.2L351.1 320L434.7 320L420.3 398.2L351 398.2L351 544L480 544C515.3 544 544 515.3 544 480L544 160C544 124.7 515.3 96 480 96L160 96z"/></svg></a>
+          <a href="https://www.linkedin.com/company/boateng-addo-n-nketiah-associates/" class="f-social-btn" target="_blank" rel="noopener" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M160 96C124.7 96 96 124.7 96 160L96 480C96 515.3 124.7 544 160 544L480 544C515.3 544 544 515.3 544 480L544 160C544 124.7 515.3 96 480 96L160 96zM165 266.2L231.5 266.2L231.5 480L165 480L165 266.2zM236.7 198.5C236.7 219.8 219.5 237 198.2 237C176.9 237 159.7 219.8 159.7 198.5C159.7 177.2 176.9 160 198.2 160C219.5 160 236.7 177.2 236.7 198.5zM413.9 480L413.9 376C413.9 351.2 413.4 319.3 379.4 319.3C344.8 319.3 339.5 346.3 339.5 374.2L339.5 480L273.1 480L273.1 266.2L336.8 266.2L336.8 295.4L337.7 295.4C346.6 278.6 368.3 260.9 400.6 260.9C467.8 260.9 480.3 305.2 480.3 362.8L480.3 480L413.9 480z"/></svg></a>
+          <a href="https://x.com/bannnassociates" class="f-social-btn" target="_blank" rel="noopener" aria-label="X / Twitter"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M160 96C124.7 96 96 124.7 96 160L96 480C96 515.3 124.7 544 160 544L480 544C515.3 544 544 515.3 544 480L544 160C544 124.7 515.3 96 480 96L160 96zM457.1 180L353.3 298.6L475.4 460L379.8 460L305 362.1L219.3 460L171.8 460L282.8 333.1L165.7 180L263.7 180L331.4 269.5L409.6 180L457.1 180zM419.3 431.6L249.4 206.9L221.1 206.9L392.9 431.6L419.3 431.6z"/></svg></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h5>Firm</h5>
+        <ul>
+          <li><a href="../../about-us/">About Us</a></li>
+          <li><a href="../../team/">Our People</a></li>
+           <li><a href="../../insights/./">Publications</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Expertise</h5>
+        <ul>
+          <li><a href="../../services/?practice=corporate">Corporate &amp; Commercial</a></li>
+          <li><a href="../../services/?practice=disputes">Disputes &amp; Litigation</a></li>
+          <li><a href="../../services/?practice=energy">Energy &amp; Infrastructure</a></li>
+          <li><a href="../../services/?practice=family">Family Wealth</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-contact">
+        <h5>Contact</h5>
+        <p>8 Nii Bonne Crescent,
+Dzorwulu - Accra, Ghana</p>
+        <p><strong>+233 303 966 156</strong></p>
+        <p><a href="mailto:info@bannandassociates.com">info@bannandassociates.com</a></p>
+        <p style="margin-top:14px"><a href="../../contact/" class="btn-primary" style="font-size:10px;padding:10px 20px;">Get In Touch</a></p>
+        <ul style="margin-top:22px">
+          <li><a href="../../legal-notices/">Legal Notices</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ── SEARCH OVERLAY ── -->
+<div class="search-overlay" id="searchOverlay">
+  <button class="search-close" id="searchClose">&times;</button>
+  <div class="search-form">
+    <form action="#" method="GET">
+      <input type="text" name="q" placeholder="Type to search..." autofocus>
+    </form>
+  </div>
+</div>
+
+<script src="../../js/shared.js"></script>
+</body>
+</html>
